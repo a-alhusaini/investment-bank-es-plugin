@@ -1,17 +1,15 @@
 mission "investment bank: invest with us"
 	repeat
 	to offer
-		"net worth" > 5000000
-		random < 25
+		"net worth" > 50000000
+		random < 15
 	on accept
 		payment -1000000
 		"salary: Investment Bank" += 5000
-	on complete
-		dialog `Your new investment has been activated successfully`
 	on offer
 		conversation
 			`Would you like to invest with our investment bank?`
-			`We for every 1 mil credits invested we will provide a salary of 5000 credits per day`
+			`For every million credits invested we will provide a salary of 5000 credits per day`
 			choice
 				`{accept}`
 					accept
